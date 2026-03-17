@@ -8,11 +8,27 @@ https://templatemo.com/tm-521-get-ready
 
   @import url('https://fonts.googleapis.com/css?family=Arsenal:300,400');
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body, html {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     margin: 0;
     -webkit-perspective: 1000;
     font-family: 'IBM Plex Sans', sans-serif;
     background: #d4d4d4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
   }
 
   body::before {
@@ -28,12 +44,6 @@ https://templatemo.com/tm-521-get-ready
     z-index: -1;
   }
 
-  body, html {
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
 
 
   /*---------------------------------------
@@ -46,20 +56,32 @@ https://templatemo.com/tm-521-get-ready
   }
 
   h1 {
-    color: #e6ff00;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 400;
-    font-size: 3em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f5e9c9;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.6em;
   }
 
   h2 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
     color: #000000;
-    font-size: 2em;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.6em;
   }
 
   h3 {
+    font-size: clamp(0.75rem, 1.8vw, 1rem);
+    font-weight: 300;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
     color: #000000;
-    font-weight: 360;
-    font-size: 1.5em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
   }
 
   h4 {
@@ -113,15 +135,30 @@ https://templatemo.com/tm-521-get-ready
   }
 
   .overlay {
-    background: linear-gradient(to top right, #d4d4d4, #000000);
-    opacity: 0.8;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.30) 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: rgba(245, 233, 201, 0.6);
+    margin: 0 auto 1.6em;
   }
 
   .grid {
