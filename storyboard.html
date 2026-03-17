@@ -241,7 +241,18 @@
     display: flex; align-items: center; justify-content: center;
     min-height: 100vh;
     position: relative; overflow: hidden;
-    background: transparent; /* let Vegas show through */
+    background: transparent;
+  }
+
+  #home::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url('images/swissalps.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 0;
   }
 
   #home .overlay {
