@@ -15,6 +15,19 @@ https://templatemo.com/tm-521-get-ready
     background: #d4d4d4;
   }
 
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url('../images/swissalps.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.3;
+    z-index: -1;
+  }
+
   body, html {
     height: 100%;
     width: 100%;
